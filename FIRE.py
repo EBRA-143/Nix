@@ -1,11 +1,6 @@
-import os,platform
-os.system('clear')
-print('[•] Checking Updates...')
-os.system('git pull')
-bit = platform.architecture()[0]
-if bit=='64bit':
-    print('\033[1;32m[•] Congrats! Your Device Support This Tools \033[1;37m')
-    os.system('xdg-open https://www.facebook.com/mdebrahimmiah143')
+import platform
+b = platform.architecture()[0]
+if b == '64bit':
     import ebra
-else:
-    exit('\033[1;31m[×] Sorry Device Not Support')
+elif b == '32bit':
+    print("32bit Not Supported! Sorry")
